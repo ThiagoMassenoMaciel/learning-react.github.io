@@ -43,6 +43,9 @@ e2 - erro 2
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 11</title>
@@ -79,37 +82,51 @@ e2 - erro 2
             height: auto;
         }
 
-        li{
+        .s1 > nav > ul > li{
             list-style-type: none;
             padding: 0px;
 
-            background-color: aqua;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.716);
+            border-radius: 20px;
+            box-sizing: content-box;
 
             width: fit-content;
+            height: fit-content;
+
         }
 
-        li > a{
+        .s1 > nav > ul > li > a{
             border-style: none;
             list-style: none;
+            text-decoration: none;
 
             width: 144px;
-            height: 189px;
+            
             padding: 0px;
 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
 
         }
 
-        li > a > img{
+        .s1 > nav > ul > li > a > img{
+            margin-top: 10px;
             width: 131px;
             height: 131px;
         }
 
-        li > a > p{
+        .s1 > nav > ul > li > a > p{
             width: 130px;
             height: fit-content;
 
             font-size: 13px;
+            font-family: "Lemon", serif;
             text-align: center;
+
+            color: #000;
         }
 
         .s1{
@@ -118,6 +135,12 @@ e2 - erro 2
 
             z-index: 3;
         }
+
+        .s1 > nav{
+            width: 100vw;
+            height: 249px;
+        }
+
         .s2{
             background-color: rgb(223, 223, 223);
         }
