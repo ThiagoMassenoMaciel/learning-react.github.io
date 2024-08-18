@@ -52,114 +52,200 @@ e2 - erro 2
     
     <style>
 
-        body{
-            margin: 0px;
-            padding: 0px;
-        }
+       @media screen and (max-width:320px) {
 
-        header{
-            display: flex;
-            flex-direction: row;
-            justify-items: center;
-            justify-content: center;
+            body{
+                margin: 0px;
+                padding: 0px;
+            }
 
-            z-index: 4;
-        }
+            header{
+                display: flex;
+                flex-direction: row;
+                justify-items: center;
+                justify-content: center;
 
-        main{
-            width: 100vw;
-            height: fit-content;
-        }
+                z-index: 4;
+            }
 
-        section{
-            min-height: 568px;
-            height: 100vh;
-            width:100vw;
-        }
+            main{
+                width: 100vw;
+                height: fit-content;
+            }
 
-        section > img{
-            width: 100vw;
-            height: auto;
-        }
+            section{
+                min-height: 568px;
+                height: 100vh;
+                width:100vw;
+            }
 
-        .s1 > nav > ul > li{
-            list-style-type: none;
-            padding: 0px;
+            section > img{
+                width: 100vw;
+                height: auto;
+            }
 
-            background-color: #fff;
-            box-shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.716);
-            border-radius: 20px;
-            box-sizing: content-box;
+            .s1 > nav > ul {
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around ;
+                align-items: center;  
+                
+                margin: 0px;
+                padding: 0;
+            }
 
-            width: fit-content;
-            height: fit-content;
+            .s1 > nav > ul > li{
+                list-style-type: none;
+                padding: 0px;
 
-        }
+                background-color: #fff;
+                box-shadow: 0px 0px 10px 1px hsla(0, 0%, 0%, 0.716);
+                border-radius: 20px;
+                box-sizing: content-box;
 
-        .s1 > nav > ul > li > a{
-            border-style: none;
-            list-style: none;
-            text-decoration: none;
+                width: fit-content;
+                height: fit-content;
 
-            width: 144px;
+            }
+
+            .s1 > nav > ul > li > a{
+                border-style: none;
+                list-style: none;
+                text-decoration: none;
+
+                width: 144px;
+                
+                padding: 0px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+            }
+
+            .s1 > nav > ul > li > a > img{
+                margin-top: 10px;
+                width: 131px;
+                height: 131px;
+            }
+
+            .s1 > nav > ul > li > a > p{
+                width: 130px;
+                height: fit-content;
+
+                font-size: 13px;
+                font-family: "Lemon", serif;
+                text-align: center;
+
+                color: #000;
+            }
+
+            .s1{
+                
+                height: 568px;
+
+                z-index: 3;
+            }
+
+            .s1 > nav{
+                width: 100vw;
+                height: fit-content;
+            }
+
+            .s2{
+                background-color: rgb(255, 255, 255);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+            }
+
+            .s3{
+                background-color: rgb(145, 145, 145);
+
+                padding: 20px;
+
+                box-sizing: border-box;
+            }
+
+            .s3 > .section_content{
+                min-height: 523px;  
+                height: 523px;              
+                width: 281px;
+
+                padding: 15px;
+                box-sizing: border-box;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 31px;
+
+                font-family: "Lemon", serif;
+                
+                background-color: #0088D2;
+                border-radius: 20px;
+
+            }
+
+            .s3 > .section_content > img{
+                height: 299px;
+                width: 251px;
+
+                border-radius: 25px;
+            }
+
+            .s3 > .section_content > .texto{
+                padding: 10px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+                text-align: center;
+
+                background-color: #003E8D;
+                color: #fff;
+
+                border-radius: 20px;
+            }
+
+            .s3 > .section_content > .texto > .titulo{
+                font-size: 14px;
+                font-weight: 400;
+
+                text-align: center;
+
+                margin: 0px;
+                padding: 0px;
+            }
+
             
-            padding: 0px;
+            .s3 > .section_content > .texto > .subtitulo{
+                font-size: 8px;
+                font-weight: 400;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
+                margin: 0px;
+                padding: 0px;
+            }
 
-        }
+            .s4{
+                background-color: rgb(59, 59, 59);
+            }
 
-        .s1 > nav > ul > li > a > img{
-            margin-top: 10px;
-            width: 131px;
-            height: 131px;
-        }
+            .s5{
+                background-color: rgb(27, 27, 27);
+            }
 
-        .s1 > nav > ul > li > a > p{
-            width: 130px;
-            height: fit-content;
+            .s6{
+                background-color: rgb(0, 0, 0);
+            }
 
-            font-size: 13px;
-            font-family: "Lemon", serif;
-            text-align: center;
 
-            color: #000;
-        }
-
-        .s1{
-            
-            height: 568px;
-
-            z-index: 3;
-        }
-
-        .s1 > nav{
-            width: 100vw;
-            height: 249px;
-        }
-
-        .s2{
-            background-color: rgb(223, 223, 223);
-        }
-
-        .s3{
-            background-color: rgb(145, 145, 145);
-        }
-
-        .s4{
-            background-color: rgb(59, 59, 59);
-        }
-
-        .s5{
-            background-color: rgb(27, 27, 27);
-        }
-
-        .s6{
-            background-color: rgb(0, 0, 0);
-        }
+       }
 
     </style>
 </head>
@@ -207,6 +293,21 @@ e2 - erro 2
             )
         }
 
+        function Section_content({ nome_img, titulo, subtitulo}){
+            return(
+                <section className="section_content">
+                    <Img nome_img={nome_img} />
+                    <div className="texto">
+                        <p className="titulo">{titulo}</p>
+                        <p className="subtitulo">
+                            {subtitulo}
+                        </p>
+                    </div>
+                </section>
+            )
+
+        }
+
         const li_1 = (
             <A_LinkToSection 
                 href_a="s3"
@@ -235,11 +336,18 @@ e2 - erro 2
                         </section>
 
                         <section className="s2">
--
+                            <Img nome_img="logo.svg" />
+                            <Img nome_img="s2-icon.svg"/>
+
                         </section>
 
                         <section className="s3">
--
+                            <Section_content 
+                                nome_img="ss1.svg"  
+                                titulo="infecção do trato unário"  
+                                subtitulo="Quase sempre causadas por bactérias, embora alguns vírus, fungos e parasitas também possam infectar o trato urinário. Mais de 85% das ITUs são causadas por bactérias do intestino ou da vagina"
+                            />
+
                         </section>
 
                         <section className="s4">
