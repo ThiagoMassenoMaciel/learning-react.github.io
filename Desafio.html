@@ -87,11 +87,13 @@ e2 - erro 2
             .s1 > nav > ul {
                 display: flex;
                 flex-direction: row;
-                justify-content:space-around ;
+                gap: 100px;
                 align-items: center;  
+                justify-items: center;
+                overflow-x: scroll;
                 
                 margin: 0px;
-                padding: 0;
+                padding: 10px 10px 10px 100px;
             }
 
             .s1 > nav > ul > li{
@@ -104,6 +106,7 @@ e2 - erro 2
                 box-sizing: content-box;
 
                 width: fit-content;
+                min-height: 201px;
                 height: fit-content;
 
             }
@@ -162,15 +165,19 @@ e2 - erro 2
 
             }
 
-            .s3{
-                background-color: rgb(145, 145, 145);
+            .s3, .s4, .s5, .s6, .s7{
+                background-color: rgb(255, 255, 255);
 
                 padding: 20px;
 
                 box-sizing: border-box;
             }
 
-            .s3 > .section_content{
+            .s3 > .section_content
+            , .s4 > .section_content
+            , .s5 > .section_content
+            , .s6 > .section_content
+            , .s7 > .section_content{
                 min-height: 523px;  
                 height: 523px;              
                 width: 281px;
@@ -191,14 +198,32 @@ e2 - erro 2
 
             }
 
-            .s3 > .section_content > img{
+            .s4 > .section_content, .s7 > .section_content{
+                background-color: #FBAD08;
+            }
+
+            .s5 > .section_content{
+                background-color: #64c613;
+            }
+
+                /*a cor do .s6 vai ser igual a cor do .s3  */            
+
+            .s3 > .section_content > img 
+            , .s4 > .section_content > img
+            , .s5 > .section_content > img
+            , .s6 > .section_content > img
+            , .s7 > .section_content > img{
                 height: 299px;
                 width: 251px;
 
                 border-radius: 25px;
             }
 
-            .s3 > .section_content > .texto{
+            .s3 > .section_content > .texto
+            , .s4 > .section_content > .texto
+            , .s5 > .section_content > .texto
+            , .s6 > .section_content > .texto
+            , .s7 > .section_content > .texto{
                 padding: 10px;
 
                 display: flex;
@@ -213,7 +238,19 @@ e2 - erro 2
                 border-radius: 20px;
             }
 
-            .s3 > .section_content > .texto > .titulo{
+            .s4 > .section_content > .texto, .s7 > .section_content > .texto{
+                background-color: #F63E04;
+            }
+
+            .s5 > .section_content > .texto{
+                background-color: #308003;
+            }
+
+            .s3 > .section_content > .texto > .titulo
+            , .s4 > .section_content > .texto > .titulo
+            , .s5 > .section_content > .texto > .titulo
+            , .s6 > .section_content > .texto > .titulo
+            , .s7 > .section_content > .texto > .titulo{
                 font-size: 14px;
                 font-weight: 400;
 
@@ -224,26 +261,17 @@ e2 - erro 2
             }
 
             
-            .s3 > .section_content > .texto > .subtitulo{
+            .s3 > .section_content > .texto > .subtitulo
+            , .s4 > .section_content > .texto > .subtitulo
+            , .s5 > .section_content > .texto > .subtitulo
+            , .s6 > .section_content > .texto > .subtitulo
+            , .s7 > .section_content > .texto > .subtitulo{
                 font-size: 8px;
                 font-weight: 400;
 
                 margin: 0px;
                 padding: 0px;
             }
-
-            .s4{
-                background-color: rgb(59, 59, 59);
-            }
-
-            .s5{
-                background-color: rgb(27, 27, 27);
-            }
-
-            .s6{
-                background-color: rgb(0, 0, 0);
-            }
-
 
        }
 
@@ -316,7 +344,43 @@ e2 - erro 2
             />
         )
 
-        const todasLI = [li_1]
+        const li_2 = (
+            
+            <A_LinkToSection 
+                href_a="s4"
+                nome_img="s2.svg" 
+                titulo_li="Disfunção erétil"                   
+            />
+        )
+
+        const li_3 = (
+            
+            <A_LinkToSection 
+                href_a="s5"
+                nome_img="s3.svg" 
+                titulo_li="Olho rosa (conjunctiviti)"                   
+            />
+        )
+
+        const li_4 = (
+            
+            <A_LinkToSection 
+                href_a="s6"
+                nome_img="s4.svg" 
+                titulo_li="Infecção sinusal (sinusite)"                   
+            />
+        )
+
+        const li_5 = (
+            
+            <A_LinkToSection 
+                href_a="s6"
+                nome_img="s5.svg" 
+                titulo_li="COVID-19"                   
+            />
+        )
+
+        const todasLI = [li_1 ,li_2, li_3, li_4, li_5]
 
         function App( { logo , todasLI}){
             return(
@@ -351,23 +415,45 @@ e2 - erro 2
                         </section>
 
                         <section className="s4">
--
+                            <Section_content 
+                                nome_img="ss2.svg"  
+                                titulo="disfunção eretil"  
+                                subtitulo="É a incapacidade do homem de alcançar ou garantir uma ereção satisfatória para as relações sexuais."
+                            />
                         </section>
 
                         <section className="s5">
--
+                            <Section_content 
+                                nome_img="ss3.svg"  
+                                titulo="Olho rosa (conjunctiviti)"  
+                                subtitulo="é a inflamação da membrana externa do globo ocular, o branco dos olhos, e do interior das pálpebras."
+                            />
                         </section>
 
                         <section className="s6">
--
+                            <Section_content 
+                                nome_img="ss4.svg"  
+                                titulo="Infecção sinusal (sinusite)"  
+                                subtitulo="É uma inflamação das mucosas do nariz, ficando entupido e com dor no rosto "
+                            />
                         </section>
+
+                        
+                        <section className="s7">
+                            <Section_content 
+                                nome_img="ss5.svg"  
+                                titulo="COVID-19"
+                                subtitulo="Referente a uma pandemia causada por uma família de vírus que causa infecções respiratórias."
+                            />
+                        </section>
+
                     </main>
                 </div>
             )
         }
 
         const all = (
-            <App logo="logo.svg" todasLI={li_1} />
+            <App logo="logo.svg" todasLI={todasLI} />
         )
 
         ReactDOM.render(all, rootElement)
