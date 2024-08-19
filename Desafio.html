@@ -93,7 +93,7 @@ e2 - erro 2
                 overflow-x: scroll;
                 
                 margin: 0px;
-                padding: 10px 10px 10px 100px;
+                padding: 10px 100px 10px 100px;
             }
 
             .s1 > nav > ul > li{
@@ -125,6 +125,17 @@ e2 - erro 2
                 justify-content: space-around;
                 align-items: center;
 
+            }
+
+            .s1 > nav > ul > li > .aa{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .s1 > nav > ul > li > .aa > p{
+                margin: 0px;
             }
 
             .s1 > nav > ul > li > a > img{
@@ -305,10 +316,24 @@ e2 - erro 2
         }
 
 
-        function A_LinkToSection({ href_a, nome_img, titulo_li}){ // aqui é para colocar    #nomeDaSection
-            
+        function A_LinkToSection({ href_a, nome_img, titulo_li, titulo_muito_grande= false}){ // aqui é para colocar    #nomeDaSection
+            // coloquei igual a false na situacao das li que n tem especificado este parametro
+            // quando usado este componente e n passado prop para este parametro quer dizer que n deve executar o que tem dentro do if
             const href = `#${href_a}`
             const src_img = `${nome_img}`
+
+            if(titulo_muito_grande){ // isso é para tirar o espaço entre a imagem e o titulo quando tiver um nome muito grande para que todas li tenham o mesmo tamanho
+                return(
+                    <li>
+                        <a className="aa" href={href}>
+                                <Img nome_img={src_img}  />
+                                    
+                                <p>{titulo_li}</p>
+                        </a>
+                    </li>
+                )
+
+            }
 
             return(
                 <li>
@@ -374,13 +399,23 @@ e2 - erro 2
         const li_5 = (
             
             <A_LinkToSection 
-                href_a="s6"
+                href_a="s7"
                 nome_img="s5.svg" 
                 titulo_li="COVID-19"                   
             />
         )
 
-        const todasLI = [li_1 ,li_2, li_3, li_4, li_5]
+        const li_6 = (
+            
+            <A_LinkToSection 
+                href_a="s8"
+                nome_img="s6.svg" 
+                titulo_li="Gripe, estreptococos, e tosse" 
+                titulo_muito_grande={true}                  
+            />
+        )
+
+        const todasLI = [li_1 ,li_2, li_3, li_4, li_5, li_6]
 
         function App( { logo , todasLI}){
             return(
@@ -443,6 +478,14 @@ e2 - erro 2
                             <Section_content 
                                 nome_img="ss5.svg"  
                                 titulo="COVID-19"
+                                subtitulo="Referente a uma pandemia causada por uma família de vírus que causa infecções respiratórias."
+                            />
+                        </section>
+
+                        <section className="s8">
+                            <Section_content
+                                nome_img="ss6.svg"
+                                titulo="Gripe, estreptococos e tosse"
                                 subtitulo="Referente a uma pandemia causada por uma família de vírus que causa infecções respiratórias."
                             />
                         </section>
